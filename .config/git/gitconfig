@@ -1,0 +1,33 @@
+[transfer]
+    # actually verify the hashes
+    fsckobjects = true
+[fetch]
+    # actually verify the hashes
+    fsckobjects = true
+    # automatically drop branches that are deleted on the remotes
+    prune = true
+    # fetch remotes in parallel
+    parallel = 0
+[receive]
+    # actually verify the hashes
+    fsckObjects = true
+[pull]
+    # requires opting-into creating a merge commit locally.
+    # Given a platform based workflow, this prevents unintentional merge
+    # commits that need to be un-wound
+    ff = only
+[merge]
+    # same as above
+    ff = only
+[color]
+    # colours are always fun
+    ui = auto
+[init]
+    # get ahead of the master -> main change
+    defaultBranch = main
+[feature]
+    manyFiles = true
+[alias]
+    # this gives `git credit` as an alternative to `git blame`, just
+    # puts you in a more positive mind set while using it.
+    credit = blame

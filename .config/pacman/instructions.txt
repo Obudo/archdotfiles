@@ -1,0 +1,5 @@
+To save:
+    pacman -Qqen > distfile
+
+To install:
+    pacman -S - < distfile

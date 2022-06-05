@@ -1,0 +1,64 @@
+# General config
+ignore-empty-password
+font=Fira Code
+screenshots
+clock
+daemonize
+timestr=%R
+
+# Init effects
+fade-in=1.5
+grace=1.5
+indicator-idle-visible
+grace-no-touch
+
+# Effects
+effect-blur=20x5
+effect-vignette=0.2:1
+
+# Colors
+
+# Use the ring color for the line between the inside and ring
+line-uses-ring
+
+# Sets the color of the text
+text-color=#ECEFF4
+text-clear-color=#ECEFF4
+text-ver-color=#ECEFF4
+text-wrong-color=#ECEFF4
+
+# Sets the color of key press highlight segments
+key-hl-color=#A3BE8C
+
+# Sets the color of backspace highlight segments
+bs-hl-color=#BF616A
+
+# Sets the color of the inside of the indicator
+inside-color=#2E3440
+
+# Sets the color of the inside of the indicator when cleared
+inside-clear-color=#2E3440
+
+# Sets the color of the inside of the indicator when verifying
+inside-ver-color=#2E3440
+
+# Sets the color of the inside of the indicator when invalid
+inside-wrong-color=#2E3440
+
+# Sets the background color of the box containing the layout text
+layout-bg-color=#2E3440
+
+# Sets the color of the outside of the indicator when typing or idle
+ring-color=#3B4252
+
+# Sets the color of the outside of the indicator when cleared
+ring-clear-color=#D08770
+
+# Sets the color of the outside of the indicator when verifying
+ring-ver-color=#5E81AC
+
+# Sets the color of the outside of the indicator when invalid
+ring-wrong-color=#BF616A
+
+# Sets the color of the lines that separate highlight segments
+separator-color=#3B4252
