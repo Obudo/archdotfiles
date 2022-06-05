@@ -6,6 +6,9 @@ require('packer').startup(function(use)
     use 'shaunsingh/nord.nvim'
     use 'ellisonleao/gruvbox.nvim'
 
+    -- Improved GUI
+    use 'neovide/neovide/'
+
     -- Colorizer
     use 'norcalli/nvim-colorizer.lua'
 
