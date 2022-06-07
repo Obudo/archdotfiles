@@ -1,6 +1,7 @@
 # General config
 ignore-empty-password
 font=Fira Code
+font-size=20
 screenshots
 clock
 daemonize
@@ -28,10 +29,10 @@ text-ver-color=#ECEFF4
 text-wrong-color=#ECEFF4
 
 # Sets the color of key press highlight segments
-key-hl-color=#A3BE8C
+key-hl-color=#81A1C1
 
 # Sets the color of backspace highlight segments
-bs-hl-color=#BF616A
+bs-hl-color=#D08770
 
 # Sets the color of the inside of the indicator
 inside-color=#2E3440
@@ -52,10 +53,10 @@ layout-bg-color=#2E3440
 ring-color=#3B4252
 
 # Sets the color of the outside of the indicator when cleared
-ring-clear-color=#D08770
+ring-clear-color=#EBCB8B
 
 # Sets the color of the outside of the indicator when verifying
-ring-ver-color=#5E81AC
+ring-ver-color=#81A1C1
 
 # Sets the color of the outside of the indicator when invalid
 ring-wrong-color=#BF616A

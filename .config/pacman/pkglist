@@ -16,6 +16,7 @@ calibre
 clang
 codeblocks
 colord
+copyq
 dav1d
 discord
 dmenu
@@ -36,6 +37,7 @@ hidapi
 imv
 iwd
 jack2
+jq
 l-smash
 lame
 lftp
@@ -108,12 +110,15 @@ srt
 starship
 svt-av1
 sway
+swaybg
 swayidle
 sysfsutils
 terminus-font
 texinfo
 tldr
 traceroute
+tree
+ttc-iosevka
 ttf-fira-code
 ttf-font-awesome
 udiskie
