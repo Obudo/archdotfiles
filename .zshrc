@@ -21,6 +21,10 @@ alias b++="clang++ -Werror -pedantic-errors -Wall -Weffc++ -Wextra -Wsign-conver
 alias zt='zathura'
 alias vim='nvim'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.archdotfiles/ --work-tree=$HOME'
+<<<<<<< HEAD
+=======
+alias lipsum='curl -s -X POST https://lipsum.com/feed/json -d "amount=5" -d "what=paras" -d"start=true" | jq -r ".feed.lipsum"'
+>>>>>>> 5bbe990 (Added zsh files)
 
 zstyle ':completion:*' menu select
 zstyle ':completion:*' rehash true
