@@ -68,5 +68,8 @@ tmap("<C-l>", "<C-\\><C-N><C-w>l")
 
 -- Telescope --
 nmap("<leader>f", "<cmd>Telescope find_files<cr>")
--- nmap("<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>")
+nmap("<leader>gb", "<cmd>Telescope git_branches<cr>")
+nmap("<leader>gf", "<cmd>Telescope git_files<cr>")
+nmap("<leader>gs", "<cmd>Telescope git_status<cr>")
+nmap("<leader>gc", "<cmd>Telescope git_commits<cr>")
 nmap("<c-t>", "<cmd>Telescope live_grep<cr>")
