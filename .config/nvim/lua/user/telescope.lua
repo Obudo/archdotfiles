@@ -11,7 +11,6 @@ telescope.setup {
         prompt_prefix = ' ',
         selection_caret = ' ',
         path_display = { 'smart' },
-        -- preview = false,
 
         mappings = {
             i = {
@@ -79,8 +78,8 @@ telescope.setup {
         },
     },
     pickers = {
-        file_picker = {
-            preview = false
+        find_files = {
+            previewer = false
         }
         -- Default configuration for builtin pickers goes here:
         -- picker_name = {
@@ -106,4 +105,3 @@ telescope.setup {
 }
 
 telescope.load_extension('fzf')
-

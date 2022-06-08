@@ -8,3 +8,4 @@ require 'user.lsp'
 require 'user.filetype'
 require 'user.incremental_rename'
 require 'user.telescope'
+require "user.treesitter"
