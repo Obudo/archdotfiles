@@ -41,7 +41,7 @@ nmap('<leader>e', ':Lex 30<cr>')
 -- Navigate buffers
 nmap('<leader>l', ':bn<CR>')
 nmap('<leader>h', ':bp<CR>')
-nmap('<leader>q', ':bd<CR>')
+nmap('<leader>d', ':bd<CR>')
 
 -- Visual
 -- Hold the paste contents

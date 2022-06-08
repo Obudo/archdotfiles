@@ -54,8 +54,31 @@ return packer.startup(function (use)
     use 'shaunsingh/nord.nvim'
 
     -- Statusline
-    -- WIP
-    -- use 'nvim-lualine/lualine.nvim'
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
+
+    -- Completion plugin + completition extensions
+    use "hrsh7th/nvim-cmp"
+    use "hrsh7th/cmp-buffer" -- buffer completions
+    use "hrsh7th/cmp-path" -- path completions
+    use "hrsh7th/cmp-cmdline" -- command line completions
+    use "saadparwaiz1/cmp_luasnip" -- snippet completions
+    use "hrsh7th/cmp-nvim-lsp" -- LSP completions
+    use "hrsh7th/cmp-nvim-lua" -- neovim Lua API
+
+    -- Snippet Engine + snippets for various languages
+    use "L3MON4D3/LuaSnip"
+    use "rafamadriz/friendly-snippets"
+
+    -- Language Server Provider
+    use "neovim/nvim-lspconfig"
+
+    -- LSP installer
+    use "williamboman/nvim-lsp-installer"
+
+
 
     -- End of plugins
 
