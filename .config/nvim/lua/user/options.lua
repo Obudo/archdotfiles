@@ -1,10 +1,13 @@
 local opt = vim.opt
 
 -- Always use the system clipboard
-opt.clipboard:append 'unnamedplus' 
+opt.clipboard:append 'unnamedplus'
 
 -- More space in the neovim command line
 opt.cmdheight = 2
+
+-- Use global status line
+opt.laststatus = 3
 
 -- Show menu for one entry only, force user selection
 opt.completeopt = { 'menuone', 'noselect' }
@@ -29,7 +32,7 @@ opt.hlsearch = false
 opt.mouse = 'a'
 
 -- Number of popup menu entries
-opt.pumheight = 10 
+opt.pumheight = 10
 
 -- Hide mode in status bar
 opt.showmode = false
@@ -37,7 +40,7 @@ opt.showmode = false
 -- Always show tabs
 opt.showtabline = 2
 
--- Place all swapfiles in .vim/tmp 
+-- Place all swapfiles in .vim/tmp
 table.insert(opt.directory, 1, '$HOME/.vim/tmp//')
 
 -- Enables persistent undo for every file

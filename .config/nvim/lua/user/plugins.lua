@@ -60,24 +60,34 @@ return packer.startup(function (use)
     }
 
     -- Completion plugin + completition extensions
-    use "hrsh7th/nvim-cmp"
-    use "hrsh7th/cmp-buffer" -- buffer completions
-    use "hrsh7th/cmp-path" -- path completions
-    use "hrsh7th/cmp-cmdline" -- command line completions
-    use "saadparwaiz1/cmp_luasnip" -- snippet completions
-    use "hrsh7th/cmp-nvim-lsp" -- LSP completions
-    use "hrsh7th/cmp-nvim-lua" -- neovim Lua API
+    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-buffer' -- buffer completions
+    use 'hrsh7th/cmp-path' -- path completions
+    use 'hrsh7th/cmp-cmdline' -- command line completions
+    use 'saadparwaiz1/cmp_luasnip' -- snippet completions
+    use 'hrsh7th/cmp-nvim-lsp' -- LSP completions
+    use 'hrsh7th/cmp-nvim-lua' -- neovim Lua API
 
     -- Snippet Engine + snippets for various languages
-    use "L3MON4D3/LuaSnip"
-    use "rafamadriz/friendly-snippets"
+    use 'L3MON4D3/LuaSnip'
+    use 'rafamadriz/friendly-snippets'
 
     -- Language Server Provider
-    use "neovim/nvim-lspconfig"
+    use 'neovim/nvim-lspconfig'
 
     -- LSP installer
-    use "williamboman/nvim-lsp-installer"
+    use 'williamboman/nvim-lsp-installer'
 
+    -- Incremental Renaming
+    use 'smjonas/inc-rename.nvim'
+
+    -- Telescope fuzzy finder
+    use 'nvim-telescope/telescope.nvim'
+    use 'nvim-telescope/telescope-media-files.nvim'
+    use {
+        'nvim-telescope/telescope-fzf-native.nvim',
+        run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build'
+    }
 
 
     -- End of plugins

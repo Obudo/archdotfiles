@@ -4,25 +4,22 @@ local term_opts = { silent = true }
 
 -- Utility functions
 local keymap = vim.api.nvim_set_keymap
-local nmap = function (lhs, rhs)
-    return keymap('n', lhs, rhs, std_opts)
-end 
 
 local nmap = function (lhs, rhs)
     return keymap('n', lhs, rhs, std_opts)
-end 
+end
 
 local vmap = function (lhs, rhs)
     return keymap('v', lhs, rhs, std_opts)
-end 
+end
 
 local xmap = function (lhs, rhs)
     return keymap('x', lhs, rhs, std_opts)
-end 
+end
 
 local tmap = function (lhs, rhs)
     return keymap('t', lhs, rhs, term_opts)
-end 
+end
 
 -- Remap Space as leader key
 keymap('', '<Space>', '<Nop>', std_opts)
@@ -68,3 +65,8 @@ tmap("<C-h>", "<C-\\><C-N><C-w>h")
 tmap("<C-j>", "<C-\\><C-N><C-w>j")
 tmap("<C-k>", "<C-\\><C-N><C-w>k")
 tmap("<C-l>", "<C-\\><C-N><C-w>l")
+
+-- Telescope --
+nmap("<leader>f", "<cmd>Telescope find_files<cr>")
+-- nmap("<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>")
+nmap("<c-t>", "<cmd>Telescope live_grep<cr>")
