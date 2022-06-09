@@ -98,9 +98,13 @@ return packer.startup(function (use)
     -- Colorize hex colors
     use 'norcalli/nvim-colorizer.lua'
 
-    -- Random silly stuff
-    use 'ThePrimeagen/vim-be-good'
+    -- Autopairs for brackets, apexes and html tags
+    use 'windwp/nvim-autopairs'
+    use 'windwp/nvim-ts-autotag'
 
+    -- Quickly comment/uncommment lines with context awareness
+    use "numToStr/Comment.nvim"
+    use 'JoosepAlviste/nvim-ts-context-commentstring'
 
     -- End of plugins
 
