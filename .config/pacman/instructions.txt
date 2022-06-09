@@ -1,5 +1,6 @@
 To save:
-    pacman -Qqen > distfile
+    pacman -Qen > distfile
+    pacman -Qm > yaydistfile
 
 To install:
     pacman -S - < distfile
