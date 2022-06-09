@@ -95,6 +95,13 @@ return packer.startup(function (use)
     }
     use "p00f/nvim-ts-rainbow"
 
+    -- Colorize hex colors
+    use 'norcalli/nvim-colorizer.lua'
+
+    -- Random silly stuff
+    use 'ThePrimeagen/vim-be-good'
+
+
     -- End of plugins
 
     -- Automatically set up your configuration after cloning packer.nvim
