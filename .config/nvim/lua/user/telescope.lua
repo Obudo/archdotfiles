@@ -81,13 +81,6 @@ telescope.setup {
         find_files = {
             previewer = false
         }
-        -- Default configuration for builtin pickers goes here:
-        -- picker_name = {
-        --   picker_config_key = value,
-        --   ...
-        -- }
-        -- Now the picker_config_key will be applied every time you call this
-        -- builtin picker
     },
     extensions = {
         fzf = {
@@ -96,12 +89,18 @@ telescope.setup {
             override_file_sorter = true,
             case_mode = 'smart_case'
         }
-        -- Your extension configuration goes here:
-        -- extension_name = {
-        --   extension_config_key = value,
-        -- }
-        -- please take a look at the readme of the extension you want to configure
     },
 }
 
 telescope.load_extension('fzf')
+
+local keymap = vim.api.nvim_set_keymap
+local std_opts = { noremap = true, silent = true }
+
+-- Keymaps
+keymap('n', "<leader>f", "<cmd>Telescope find_files<cr>", std_opts)
+keymap('n', "<leader>t", "<cmd>Telescope live_grep<cr>", std_opts)
+keymap('n', "<leader>gb", "<cmd>Telescope git_branches<cr>", std_opts)
+keymap('n', "<leader>gf", "<cmd>Telescope git_files<cr>", std_opts)
+keymap('n', "<leader>gs", "<cmd>Telescope git_status<cr>", std_opts)
+keymap('n', "<leader>gc", "<cmd>Telescope git_commits<cr>", std_opts)

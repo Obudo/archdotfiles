@@ -90,10 +90,10 @@ return packer.startup(function (use)
 
     -- Treesitter
     use {
-        "nvim-treesitter/nvim-treesitter",
-        run = ":TSUpdate",
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate',
     }
-    use "p00f/nvim-ts-rainbow"
+    use 'p00f/nvim-ts-rainbow'
 
     -- Colorize hex colors
     use 'norcalli/nvim-colorizer.lua'
@@ -103,8 +103,24 @@ return packer.startup(function (use)
     use 'windwp/nvim-ts-autotag'
 
     -- Quickly comment/uncommment lines with context awareness
-    use "numToStr/Comment.nvim"
+    use 'numToStr/Comment.nvim'
     use 'JoosepAlviste/nvim-ts-context-commentstring'
+
+    -- Git information and conflict marker
+    use 'lewis6991/gitsigns.nvim'
+    use 'akinsho/git-conflict.nvim'
+
+    -- Nvim-tree
+    use {
+        'kyazdani42/nvim-tree.lua',
+        requires = {
+            'kyazdani42/nvim-web-devicons'
+        }
+    }
+
+    -- Bufferline
+    use 'akinsho/bufferline.nvim'
+    use 'moll/vim-bbye'
 
     -- End of plugins
 

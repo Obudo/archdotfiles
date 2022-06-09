@@ -1,75 +1,44 @@
--- Set options for standard keymaps and terminal keymaps
+local keymap = vim.api.nvim_set_keymap
 local std_opts = { noremap = true, silent = true }
 local term_opts = { silent = true }
-
--- Utility functions
-local keymap = vim.api.nvim_set_keymap
-
-local nmap = function (lhs, rhs)
-    return keymap('n', lhs, rhs, std_opts)
-end
-
-local vmap = function (lhs, rhs)
-    return keymap('v', lhs, rhs, std_opts)
-end
-
-local xmap = function (lhs, rhs)
-    return keymap('x', lhs, rhs, std_opts)
-end
-
-local tmap = function (lhs, rhs)
-    return keymap('t', lhs, rhs, term_opts)
-end
 
 -- Remap Space as leader key
 keymap('', '<Space>', '<Nop>', std_opts)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- Normal
+-- NORMAL
 -- Better window navigation
-nmap('<C-h>', '<C-w>h')
-nmap('<C-j>', '<C-w>j')
-nmap('<C-k>', '<C-w>k')
-nmap('<C-l>', '<C-w>l')
+keymap('n', '<C-h>', '<C-w>h', std_opts)
+keymap('n', '<C-j>', '<C-w>j', std_opts)
+keymap('n', '<C-k>', '<C-w>k', std_opts)
+keymap('n', '<C-l>', '<C-w>l', std_opts)
 
-nmap('<leader>e', ':Lex 30<cr>')
+-- Close buffers
+keymap('n', '<leader>d', ':bd<CR>', std_opts)
 
--- Navigate buffers
-nmap('<leader>l', ':bn<CR>')
-nmap('<leader>h', ':bp<CR>')
-nmap('<leader>d', ':bd<CR>')
-
--- Visual
+-- VISUAL
 -- Hold the paste contents
-vmap('p', '"_dP')
+keymap('v', 'p', '"_dP', std_opts)
 
 -- Stay in indent mode
-vmap('>', '>gv')
-vmap('<', '<gv')
+keymap('v', '>', '>gv', std_opts)
+keymap('v', '<', '<gv', std_opts)
 
 -- Move line text up and down
-vmap('<A-j>', ':m .+1<CR>==')
-vmap('<A-k>', ':m .-2<CR>==')
+keymap('v', '<A-j>', ':m .+1<CR>==', std_opts)
+keymap('v', '<A-k>', ':m .-2<CR>==', std_opts)
 
--- Visual Block
+-- VISUAL BLOCK
 -- Move text block up and down
-xmap("J", ":m '>+1<CR>gv-gv")
-xmap("K", ":m '<-2<CR>gv-gv")
-xmap("<A-j>", ":m '>+1<CR>gv-gv")
-xmap("<A-k>", ":m '<-2<CR>gv-gv")
+keymap('x', "J", ":m '>+1<CR>gv-gv", std_opts)
+keymap('x', "K", ":m '<-2<CR>gv-gv", std_opts)
+keymap('x', "<A-j>", ":m '>+1<CR>gv-gv", std_opts)
+keymap('x', "<A-k>", ":m '<-2<CR>gv-gv", std_opts)
 
--- Terminal --
+-- TERMINAL
 -- Better terminal navigation
-tmap("<C-h>", "<C-\\><C-N><C-w>h")
-tmap("<C-j>", "<C-\\><C-N><C-w>j")
-tmap("<C-k>", "<C-\\><C-N><C-w>k")
-tmap("<C-l>", "<C-\\><C-N><C-w>l")
-
--- Telescope --
-nmap("<leader>f", "<cmd>Telescope find_files<cr>")
-nmap("<leader>gb", "<cmd>Telescope git_branches<cr>")
-nmap("<leader>gf", "<cmd>Telescope git_files<cr>")
-nmap("<leader>gs", "<cmd>Telescope git_status<cr>")
-nmap("<leader>gc", "<cmd>Telescope git_commits<cr>")
-nmap("<c-t>", "<cmd>Telescope live_grep<cr>")
+keymap('t', "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
+keymap('t', "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
+keymap('t', "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
+keymap('t', "<C-l>", "<C-\\><C-N><C-w>l", term_opts)

@@ -40,3 +40,8 @@ configs.setup {
     }
 }
 
+-- local opt = vim.opt
+-- local api = vim.api
+
+-- opt.foldmethod = 'expr'
+-- opt.foldexpr = 'nvim_treesitter#foldexpr()'
