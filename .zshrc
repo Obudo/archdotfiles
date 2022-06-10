@@ -19,9 +19,9 @@ alias ls='ls --color=auto'
 alias b="clang -Werror -pedantic-errors -Wall -Wextra -Wsign-conversion"
 alias b++="clang++ -Werror -pedantic-errors -Wall -Weffc++ -Wextra -Wsign-conversion -std=c++2a"
 alias zt='zathura'
-alias v='nvim'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.archdotfiles/ --work-tree=$HOME'
 alias lipsum='curl -s -X POST https://lipsum.com/feed/json -d "amount=5" -d "what=paras" -d"start=true" | jq -r ".feed.lipsum"'
+alias bacpac='pacman -Qen > $HOME/.config/pacman/pkglist & pacman -Qm > $HOME/.config/pacman/yaypkglist'
 
 zstyle ':completion:*' menu select
 zstyle ':completion:*' rehash true
