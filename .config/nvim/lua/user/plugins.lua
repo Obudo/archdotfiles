@@ -125,6 +125,8 @@ return packer.startup(function(use)
     -- Null-ls - Formatting and linting
     use 'jose-elias-alvarez/null-ls.nvim'
 
+    -- Floating terminal
+    use "akinsho/toggleterm.nvim"
 
     -- End of plugins
 

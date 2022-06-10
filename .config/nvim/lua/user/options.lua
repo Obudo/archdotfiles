@@ -79,3 +79,6 @@ opt.exrc = true
 
 -- Don't automatically add comments after newline
 vim.cmd [[au FileType * set fo-=c fo-=r fo-=o]]
+
+-- Set shell to zsh
+opt.shell='/usr/bin/zsh'

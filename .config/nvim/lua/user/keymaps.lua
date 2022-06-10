@@ -41,7 +41,8 @@ xmap("<A-k>", ":m '<-2<CR>gv-gv")
 
 -- TERMINAL
 -- Better terminal navigation
-tmap("<C-h>", "<C-\\><C-N><C-w>h")
-tmap("<C-j>", "<C-\\><C-N><C-w>j")
-tmap("<C-k>", "<C-\\><C-N><C-w>k")
-tmap("<C-l>", "<C-\\><C-N><C-w>l")
+-- Remapped in toggleterm
+-- tmap("<C-h>", "<C-\\><C-N><C-w>h")
+-- tmap("<C-j>", "<C-\\><C-N><C-w>j")
+-- tmap("<C-k>", "<C-\\><C-N><C-w>k")
+-- tmap("<C-l>", "<C-\\><C-N><C-w>l")
