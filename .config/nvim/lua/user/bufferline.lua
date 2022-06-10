@@ -8,7 +8,7 @@ bufferline.setup {
   options = {
     mode = "buffers",
     numbers = "none",
-    close_command = "bdelete! %d",       -- can be a string | function, see "Mouse actions"
+    close_command = "Bdelete! %d",       -- can be a string | function, see "Mouse actions"
     max_name_length = 18,
     max_prefix_length = 15, -- prefix used when a buffer is de-duplicated
     tab_size = 18,
@@ -28,8 +28,7 @@ bufferline.setup {
     }
 }
 
-local keymap = vim.api.nvim_set_keymap
-local std_opts = { noremap = true, silent = true }
+local nmap = require('user.utils').nmap
 
-keymap('n',  '<S-l>', ':BufferLineCycleNext<cr>', std_opts)
-keymap('n',  '<S-h>', ':BufferLineCyclePrev<cr>', std_opts)
+nmap('<S-l>', ':BufferLineCycleNext<cr>')
+nmap('<S-h>', ':BufferLineCyclePrev<cr>')

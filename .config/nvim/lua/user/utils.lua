@@ -1,29 +1,19 @@
 local utils = {}
--- Set options for standard keymaps and terminal keymaps
+
+-- Use a factory function to create the mapping functions
+local create_mapper = function(mode, opts)
+    return function(lhs, rhs)
+        return vim.api.nvim_set_keymap(mode, lhs, rhs, opts)
+    end
+end
+
 local std_opts = { noremap = true, silent = true }
 local term_opts = { silent = true }
 
--- Utility functions
-local keymap = vim.api.nvim_set_keymap
-
-utils.map = function(lhs, rhs)
-    return keymap('', lhs, rhs, std_opts)
-end
-
-utils.nmap = function (lhs, rhs)
-    return keymap('n', lhs, rhs, std_opts)
-end
-
-utils.vmap = function (lhs, rhs)
-    return keymap('v', lhs, rhs, std_opts)
-end
-
-utils.xmap = function (lhs, rhs)
-    return keymap('x', lhs, rhs, std_opts)
-end
-
-utils.tmap = function (lhs, rhs)
-    return keymap('t', lhs, rhs, term_opts)
-end
+utils.map = create_mapper('', std_opts)
+utils.nmap = create_mapper('n', std_opts)
+utils.vmap = create_mapper('v', std_opts)
+utils.xmap = create_mapper('x', std_opts)
+utils.tmap = create_mapper('t', term_opts)
 
 return utils

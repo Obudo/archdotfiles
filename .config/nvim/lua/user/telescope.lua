@@ -94,13 +94,12 @@ telescope.setup {
 
 telescope.load_extension('fzf')
 
-local keymap = vim.api.nvim_set_keymap
-local std_opts = { noremap = true, silent = true }
+local nmap = require('user.utils').nmap
 
 -- Keymaps
-keymap('n', "<leader>f", "<cmd>Telescope find_files<cr>", std_opts)
-keymap('n', "<leader>t", "<cmd>Telescope live_grep<cr>", std_opts)
-keymap('n', "<leader>gb", "<cmd>Telescope git_branches<cr>", std_opts)
-keymap('n', "<leader>gf", "<cmd>Telescope git_files<cr>", std_opts)
-keymap('n', "<leader>gs", "<cmd>Telescope git_status<cr>", std_opts)
-keymap('n', "<leader>gc", "<cmd>Telescope git_commits<cr>", std_opts)
+nmap("<leader>f", "<cmd>Telescope find_files<cr>")
+nmap("<leader>t", "<cmd>Telescope live_grep<cr>")
+nmap("<leader>gb", "<cmd>Telescope git_branches<cr>")
+nmap("<leader>gf", "<cmd>Telescope git_files<cr>")
+nmap("<leader>gs", "<cmd>Telescope git_status<cr>")
+nmap("<leader>gc", "<cmd>Telescope git_commits<cr>")

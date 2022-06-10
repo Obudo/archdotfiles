@@ -40,7 +40,7 @@ packer.init {
 }
 
 -- Install plugins here
-return packer.startup(function (use)
+return packer.startup(function(use)
     -- Bootstrap packer
     use 'wbthomason/packer.nvim'
 
@@ -121,6 +121,10 @@ return packer.startup(function (use)
     -- Bufferline
     use 'akinsho/bufferline.nvim'
     use 'moll/vim-bbye'
+
+    -- Null-ls - Formatting and linting
+    use 'jose-elias-alvarez/null-ls.nvim'
+
 
     -- End of plugins
 

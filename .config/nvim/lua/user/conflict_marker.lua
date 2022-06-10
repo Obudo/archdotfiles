@@ -13,11 +13,7 @@ git_conflict.setup {
   }
 }
 
-local keymap = vim.api.nvim_set_keymap
-
-local nmap = function (lhs, rhs)
-    return keymap('n', lhs, rhs, { noremap = true, silent = true })
-end
+local nmap = require('user.utils').nmap
 
 nmap('co', '<Plug>(git-conflict-ours)')
 nmap('ct', '<Plug>(git-conflict-theirs)')

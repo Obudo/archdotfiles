@@ -7,8 +7,8 @@ end
 autopairs.setup {
     check_ts = true,
     ts_config = {
-        lua = {'string'},
-        javascript = {'string'}
+        lua = { 'string' },
+        javascript = { 'string' }
     },
     fast_wrap = {
         map = '<M-e>',
@@ -18,7 +18,7 @@ autopairs.setup {
         keys = 'qwertyuiopzxcvbnmasdfghjkl',
         check_comma = true,
         highlight = 'Search',
-        highlight_grey='Comment'
+        highlight_grey = 'Comment'
     },
 }
 
