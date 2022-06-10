@@ -1,6 +1,6 @@
 local null_ls_status_ok, null_ls = pcall(require, "null-ls")
 if not null_ls_status_ok then
-  return
+    return
 end
 
 local formatting = null_ls.builtins.formatting
@@ -27,7 +27,23 @@ null_ls.setup {
         -- Actions to fix ESLint issues or to ignore broken rules
         code_actions.eslint_d,
         -- Refactoring library based off Martin Fowler's book
-        code_actions.refactoring
+        code_actions.refactoring,
+        -- Static analysis of C/C++ code
+        diagnostics.cppcheck,
+        -- Spell check codefiles
+        diagnostics.eslint_d,
+        -- Python code quality check
+        diagnostics.flake8,
+        -- CSS linter
+        diagnostics.stylelint,
+        -- Parsed diagnostics from tsc
+        diagnostics.tsc,
+        -- Python file formatter
+        formatting.black,
+        -- C/C++ code formatting
+        formatting.clang_format,
+        -- Front end code formatter
+        formatting.prettierd,
     }
 }
 
@@ -36,4 +52,3 @@ local std_opts = { noremap = true, silent = true }
 
 -- Keymaps
 keymap('n', "<leader>F", ":Format<cr>", std_opts)
-
