@@ -1,3 +1,5 @@
+-- TODO remove check and notify once nvim 0.8 rolls out
+
 if vim.fn.has('nvim-0.8') == 0 then
     return
 end

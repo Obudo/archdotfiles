@@ -103,3 +103,6 @@ nmap("<leader>gb", "<cmd>Telescope git_branches<cr>")
 nmap("<leader>gf", "<cmd>Telescope git_files<cr>")
 nmap("<leader>gs", "<cmd>Telescope git_status<cr>")
 nmap("<leader>gc", "<cmd>Telescope git_commits<cr>")
+
+
+-- TODO find fix/workaround for telescope + folds bug

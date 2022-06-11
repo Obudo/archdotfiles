@@ -40,5 +40,8 @@ configs.setup {
     }
 }
 
--- vim.opt.foldmethod = 'expr'
--- vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.wo.foldmethod = 'expr'
+vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
+
+-- TODO add autocmd that executes zR in normal mode on BufReadPost and FileReadPost
+-- Postponed to after autocmd supported in lua
