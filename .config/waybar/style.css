@@ -1,74 +1,103 @@
+/* COLORS */
+
+/* Nord */
+@define-color dark1  #2E3440;
+@define-color dark2  #3B4252;
+@define-color dark3  #434C5E;
+@define-color dark4  #4C566A;
+
+@define-color light1 #D8DDE9;
+@define-color light2 #E5E9F0;
+@define-color light3 #ECEFF4;
+
+
+@define-color frost1 #8FBCBB;
+@define-color frost2 #88C0D0;
+@define-color frost3 #81A1C1;
+@define-color frost4 #5E81AC;
+
+
+@define-color red    #BF616A;
+@define-color orange #D08770;
+@define-color yellow #EBCB8B;
+@define-color green  #A3BE8C;
+@define-color purple #B48EAD;
+
 * {
 	font-size: 20px;
-	font-family: monospace;
+	font-family: Fira Code;
 }
 
 window#waybar {
-	background: #4c566a;
-	color: #e5e9f0;
+	background: @dark4;
+	color: @light2;
 }
 
 #custom-right-arrow-dark,
 #custom-left-arrow-dark {
-	color: #2e3440;
+	color: @dark1;
 }
 #custom-right-arrow-light,
 #custom-left-arrow-light {
-	color: #4c566a;
-	background: #2e3440;
+	color: @dark4;
+	background: @dark1;
 }
 
+#mode,
 #workspaces,
 #clock.1,
 #clock.2,
 #clock.3,
 #pulseaudio,
-#memory,
+#network,
 #cpu,
 #battery,
 #disk,
 #tray {
-	background: #2e3440;
+	background: @dark1;
 }
 
 #workspaces button {
 	padding: 0 2px;
-	color: #e5e9f0;
+	color: @light2;
 }
 #workspaces button.focused {
-	color: #88c0d0;
+	color: @frost2;
 }
 #workspaces button:hover {
 	box-shadow: inherit;
 	text-shadow: inherit;
 }
 #workspaces button:hover {
-	background: #434c5e;
-	border: #434c5e;
+	background: @dark3;
+	border: @dark3;
 	padding: 0 3px;
 }
 
 #pulseaudio {
-	color: #81a1c1;
+	color: @frost3;
 }
-#memory {
-	color: #8fbcbb;
+#network {
+	color: @frost1;
+}
+#network.disconnected {
+    color: @red;
 }
 #cpu {
-	color: #b48ead;
+	color: @purple;
 }
 #battery {
-	color: #a3b38c;
+	color: @green;
 }
 #disk {
-	color: #ebcb8b;
+	color: @yellow;
 }
 
 #clock,
 #pulseaudio,
-#memory,
 #cpu,
 #battery,
-#disk {
+#disk,
+#network {
 	padding: 0 10px;
 }
