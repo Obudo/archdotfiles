@@ -44,6 +44,8 @@ null_ls.setup {
         formatting.clang_format,
         -- Front end code formatter
         formatting.prettierd,
+        -- JSON formatter
+        formatting.fixjson
     }
 }
 

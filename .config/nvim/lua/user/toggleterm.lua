@@ -14,7 +14,7 @@ end
 
 toggleterm.setup {
     size = set_size,
-    open_mapping = [[<c-a>]],
+    open_mapping = [[<c-q>]],
     direction = 'horizontal', -- 'vertical' | 'horizontal' | 'tab' | 'float',
     close_on_exit = false,
     float_opts = {
