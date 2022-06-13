@@ -58,6 +58,7 @@ libiec61883 1.2.0-6
 libldac 2.0.2.3-1
 libmfx 22.4.2-1
 libmodplug 0.8.9.0-3
+libmupdf 1.19.1-1
 libraw1394 2.1.2-3
 libsamplerate 0.2.2-1
 libssh 0.9.6-1
@@ -130,6 +131,7 @@ swayidle 1.7.1-2
 sysfsutils 2.1.1-1
 terminus-font 4.49.1-2
 texinfo 6.8-2
+texlive-core 2022.63035-1
 tldr 3.1.0-1
 traceroute 2.1.0-5
 tree 2.0.2-1

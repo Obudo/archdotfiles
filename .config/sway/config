@@ -94,8 +94,6 @@ bindsym XF86AudioMute $volume_toggle
 bindsym XF86MonBrightnessUp $bright_up
 bindsym XF86MonBrightnessDown $bright_down
 
-bindsym $mod+p exec grim -g "$(slurp -d)" -t png - | wl-copy -t image/png
-
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
@@ -246,8 +244,15 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 
-#
-# Status Bar:
+# Screenshots
+bindsym $mod+p exec grim -g "$(slurp -d)" -t png - | wl-copy -t image/png
+
+# Note taking
+for_window [ title="floater" ] floating enable
+bindsym $mod+n exec $term -t floater -e $HOME/bin/notetaker.sh
+bindsym $mod+Shift+n exec $HOME/bin/mostRecentNote.sh
+
+# Status Bar
 
 exec waybar
 
