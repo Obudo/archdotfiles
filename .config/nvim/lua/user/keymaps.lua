@@ -3,7 +3,7 @@ local map = utils.map
 local nmap = utils.nmap
 local vmap = utils.vmap
 local xmap = utils.xmap
-local tmap = utils.tmap
+-- local tmap = utils.tmap
 
 -- Remap Space as leader key
 map('<Space>', '<Nop>')

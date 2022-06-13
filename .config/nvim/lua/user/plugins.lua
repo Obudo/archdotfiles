@@ -128,6 +128,9 @@ return packer.startup(function(use)
     -- Floating terminal
     use "akinsho/toggleterm.nvim"
 
+    -- Context bar
+    use 'nvim-treesitter/nvim-treesitter-context'
+
     -- End of plugins
 
     -- Automatically set up your configuration after cloning packer.nvim
