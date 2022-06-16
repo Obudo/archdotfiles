@@ -33,17 +33,17 @@ configs.setup {
 
     },
     indent = { enable = true, disable = { "yaml" } },
+    -- TODO set decent colors for parentheses
     rainbow = {
-        enable = true,
+        enable = false,
         extended_mode = true,
         max_file_lines = nil
     }
 }
 
-vim.wo.foldmethod = 'expr'
-vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
 
 
--- TODO add autocmd that executes zR in normal mode on BufReadPost and FileReadPost
--- Postponed to after autocmd supported in lua
+-- TODO handle folds
+-- vim.wo.foldmethod = 'expr'
+-- vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
 -- vim.cmd('au BufReadPost,FileReadPost * normal zR')

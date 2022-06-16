@@ -40,8 +40,6 @@ null_ls.setup {
         diagnostics.tsc,
         -- Python file formatter
         formatting.black,
-        -- C/C++ code formatting
-        formatting.clang_format,
         -- Front end code formatter
         formatting.prettierd,
         -- JSON formatter

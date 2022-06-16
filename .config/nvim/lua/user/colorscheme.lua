@@ -1,7 +1,8 @@
-local colorscheme = 'nord'
-
-local status_ok, _ = pcall(vim.cmd, 'colorscheme ' .. colorscheme)
+local status_ok, onenord = pcall(require, 'onenord')
 if not status_ok then
-    vim.notify('colorscheme ' .. colorscheme .. ' not found')
+    vim.notify('Plugin onenord not found')
     return
 end
+
+onenord.setup {
+}

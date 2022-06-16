@@ -50,8 +50,11 @@ return packer.startup(function(use)
     use 'nvim-lua/popup.nvim'
     use 'nvim-lua/plenary.nvim'
 
-    -- Nord colorscheme
-    use 'shaunsingh/nord.nvim'
+    -- Colorschemes
+    use 'rmehri01/onenord.nvim'
+    -- use 'shaunsingh/nord.nvim'
+    -- use 'bluz71/vim-nightfly-guicolors'
+    -- use 'marko-cerovac/material.nvim'
 
     -- Statusline
     use {
