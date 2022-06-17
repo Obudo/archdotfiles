@@ -5,4 +5,5 @@ if not status_ok then
 end
 
 onenord.setup {
+    fade_nc = true
 }

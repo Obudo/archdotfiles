@@ -52,9 +52,6 @@ return packer.startup(function(use)
 
     -- Colorschemes
     use 'rmehri01/onenord.nvim'
-    -- use 'shaunsingh/nord.nvim'
-    -- use 'bluz71/vim-nightfly-guicolors'
-    -- use 'marko-cerovac/material.nvim'
 
     -- Statusline
     use {

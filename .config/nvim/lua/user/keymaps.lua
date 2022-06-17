@@ -1,6 +1,7 @@
 local utils = require 'user.utils'
 local map = utils.map
 local nmap = utils.nmap
+local imap = utils.imap
 local vmap = utils.vmap
 local xmap = utils.xmap
 -- local tmap = utils.tmap
@@ -19,6 +20,9 @@ nmap('<C-l>', '<C-w>l')
 
 -- Close buffers
 nmap('<leader>d', ':Bdelete!<cr>')
+
+-- INSERT
+imap('<C-c>', '<esc>')
 
 -- VISUAL
 -- Hold the paste contents
